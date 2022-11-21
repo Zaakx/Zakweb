@@ -1,0 +1,586 @@
+:root{
+    --blue:#47B5FF;
+    --navy:#1363DF;
+}
+
+*{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 70%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.navigator{
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; right: 0; left: 0;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    z-index: 9999;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.name{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #444;
+}
+
+.name span{
+    color:var(--navy);
+}
+
+.name:hover{
+    scale:1.2;
+    color: var(--navy);
+}
+
+.nav{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav a{
+    color: #333;
+    padding: .7rem 1rem;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .5);
+    color: var(--navy);
+    padding: .7rem 1rem;
+    border-bottom: .3rem solid var(--navy);
+}
+
+.nav .drop{
+    position: relative;
+    display: inline-block;
+    transition: .2s;
+}
+
+.nav .drop .dropcont{
+    position: absolute;
+    display: none;
+    padding-top: .5rem;
+}
+
+.nav .drop:hover .dropcont{
+    display: grid;
+    grid-template-columns: 12rem;
+    grid-template-rows: 3rem 3rem;
+    align-items: center;
+}
+
+/* main */
+main{
+    padding: 2rem 5rem;
+    width: 75%;
+}
+
+aside{
+    padding: 2rem 5rem 2rem 0;
+    width: 25%;
+    float: right;
+}
+
+.profil{
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom right, #444, #111);
+}
+
+.profil img{
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profil img:hover{
+    scale: 1.2;
+}
+
+.profil h1{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--navy);
+    cursor: default;
+}
+
+.profil h1:hover{
+    scale: 1.2;
+}
+
+/* info */
+.info{
+    padding: 2rem;
+    background-color: #ddd;
+    border-radius: 2rem;
+    cursor: default;
+}
+
+.info hr{
+    width: 20%;
+    height: .5rem;
+    margin-bottom: 2rem;
+    background-color: var(--navy);
+}
+
+.info h1{
+    font-size: 3rem;
+    color: #222;
+    padding: 2rem 0;
+}
+
+.info .deskripsi{
+    font-size: 1.5rem;
+    color: #222;
+    padding: 0 5rem 3rem 0;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.info h2{
+    font-size: 2.5rem;
+    color: #222;
+    padding: 0 0 1.5rem 0;
+}
+
+.info p{
+    font-size: 1.2rem;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: 0 0 .5rem 0;
+}
+
+/* favo */
+.favorite{
+    padding: 1rem 0rem 5rem 0rem;
+}
+
+.favorite .tx1 i:hover{
+    scale: 1.4;
+}
+
+.favorite .tx1{
+    padding: .5rem 20%;
+    text-align:center;
+    cursor: default;
+}
+
+.favorite .tx1 h1{
+    font-size: 5rem;
+    padding: 2rem 0;
+    color: #333;
+}
+
+.favorite .tx1 p{
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align:center;
+    padding: 1rem 0 3rem 0;
+}
+
+.favorite .tx1 p span{
+    color: var(--navy);
+}
+
+.favorite .kotak{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.favorite .kotak .blok{
+    flex: 1 1 30rem;
+    box-shadow: 0 0rem 1.5rem rgba(0, 0, 0, .3);
+    position: relative;
+    border-radius: 2rem;
+    background-color: #fff;
+}
+
+.favorite .kotak .blok:hover{
+    scale: 1.1;
+    box-shadow: 0rem 0rem 10rem #fff;
+    z-index: 1;
+}
+
+.favorite .kotak .blok .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+    background-image: url(./musik.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.favorite .kotak .blok .hoby{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+    background-image: url(./hobi.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.favorite .kotak .blok .image a{
+    font-size: 5rem;
+    color: var(--navy);
+    padding: 3rem;
+}
+
+.favorite .kotak .blok .image a:hover{
+    scale: 1.5;
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+}
+
+.favorite .kotak .blok .hoby a{
+    font-size: 5rem;
+    color: var(--navy);
+    padding: 3rem;
+}
+
+.favorite .kotak .blok .hoby a:hover{
+    scale: 1.5;
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+}
+
+.favorite .kotak .blok .pilem{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+    background-image: url(./film.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.favorite .kotak .blok .pilem a{
+    font-size: 5rem;
+    color: var(--navy);
+    padding: 3rem;
+}
+
+.favorite .kotak .blok .pilem a:hover{
+    scale: 1.5;
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+}
+
+.favorite .kotak .blok .tulis{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    background-color: var(--blue);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1.2rem;
+}
+
+.favorite .kotak .blok .tulis .tulisan{
+    font-size: 1.3rem;
+    font-weight: normal;
+    padding: 1rem 4rem;
+    text-align: justify;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+.favorite .kotak .blok .tulis .tulisan a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+}
+
+.favorite .kotak .blok .tulis .tulisan a:hover{
+    border-bottom: .2rem solid (--navy);
+}
+
+aside .side{
+    background-color: var(--navy);
+    border-radius: 2rem;
+    display: block;
+    text-align: center;
+}
+
+.side img{
+    width: 15rem;
+    padding: 1rem;
+}
+
+.side hr{
+    width: 75%;
+    height: .3rem;
+    background-color: rgba(0, 0, 0, .5);
+    margin: 1rem auto;
+}
+
+.side h1{
+    font-size: 2rem;
+    color: #222;
+}
+
+.side h2{
+    font-size: 1.5rem;
+    color: #222;
+    padding: 0 0 1rem 0;
+}
+
+.side .login{
+    display: block;
+}
+
+.side .login .tx3 h3{
+    font-size: 2rem;
+    color: #222;
+}
+
+.side .login .tx3 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0 0 1rem 0;
+}
+
+.side .login .linkk{
+    display: block;
+    padding: 2rem 0 5rem 0;
+}
+
+.side .login .linkk .oh {
+    padding: 2rem 0;
+}
+
+.side .login .linkk .uh{
+    padding: 2rem 0;
+}
+
+.side .login .linkk .uh a{
+    background-color: #222;
+    padding: .5rem 27%;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.side .login .linkk a{
+    background-color: #222;
+    padding: .5rem 20%;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.side .login .linkk a:hover{
+    background-color: var(--blue);
+}
+
+.side .li{
+    display:grid;
+    padding: 1rem 0 5rem 0;
+}
+
+.side .li a{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.side .li a:hover{
+    scale: 1.2;
+}
+
+.side h4{
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    padding: 9rem 0 2rem 0;
+}
+
+/* footer */
+.bawah{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+}
+
+.bawah .name{
+    color: #fff;
+}
+
+.bawah .name span{
+    color: var(--navy);
+}
+
+.bawah .name:hover {
+    color: var(--navy);
+}
+
+.bawah ul a{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+}
+
+.bawah ul a:hover{
+    color: var(--navy);
+}
+
+.bawah .ling a{
+    font-size: 3rem;
+    color: #fff;
+    padding: 1rem;
+}
+
+.bawah .ling a:hover{
+    color: var(--navy);
+}
+
+footer{
+    background-color: #041C32;
+}
+
+footer hr{
+    height: .1rem;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.garis{
+    size: 1.5rem;
+    background-color: rgba(255, 255, 255,.5);
+    height: .1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer .copyrek{
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    cursor: default;
+}
+
+/* responsive */
+@media screen and (max-width : 425px) {
+    /* navigator */
+    .navigator{
+        display: block;
+        text-align: center;
+        padding: 2.5rem 7%;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav a{
+        padding: 0;
+        width: fit-content;
+    }
+
+    .info i{
+        margin-top: 3rem;
+    }
+
+    .info .deskripsi{
+        padding: 0;
+        text-align: justify;
+    }
+
+    aside{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    aside .side{
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .favorite .tx1{
+        padding: .5rem 10%;
+    }
+
+    .favorite .tx1 h1{
+        font-size: 3.5rem;
+    }
+
+    .favorite .tx1 p{
+        text-align: justify;
+        width: 100%;
+    }
+
+    main{
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .favorite .kotak{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    /* lord */
+    .login{
+        display: block;
+        padding: 5rem 10%;
+    }
+
+    .login .tx3{
+        text-align: center;
+    }
+
+    .login .linkk{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .login .linkk a{
+        margin: 0;
+    }
+
+    .bawah{
+        display: block;
+        text-align: center;
+    }
+
+    .bawah ul{
+        padding: 1rem 0;
+    }
+}
