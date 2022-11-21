@@ -1,0 +1,399 @@
+:root{
+    --blue:#47B5FF;
+    --navy:#1363DF;
+}
+
+*{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 70%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/* header */
+.navigator{
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; right: 0; left: 0;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    z-index: 9999;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.name{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #444;
+}
+
+.name span{
+    color:var(--navy);
+}
+
+.name:hover{
+    scale:1.2;
+    color: var(--navy);
+}
+
+.nav{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav a{
+    color: #333;
+    padding: .7rem 1rem;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .5);
+    color: var(--navy);
+    padding: .7rem 1rem;
+    border-bottom: .3rem solid var(--navy);
+}
+
+.nav .drop{
+    position: relative;
+    display: inline-block;
+    transition: .2s;
+}
+
+.nav .drop .dropcont{
+    position: absolute;
+    display: none;
+    padding-top: .5rem;
+}
+
+.nav .drop:hover .dropcont{
+    display: grid;
+    grid-template-columns: 12rem;
+    grid-template-rows: 3rem 3rem;
+    align-items: center;
+}
+
+.pic{
+    padding: 10rem;
+    text-align: center;
+    background-image: url(./4.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pic i{
+    font-size: 5rem;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.pic h1{
+    font-size: 5rem;
+    color: #fff;
+    font-weight: bolder;
+    cursor: default;
+}
+
+.pic h1:hover{
+    color: var(--navy);
+    scale: 1.2;
+}
+
+.awal{
+    text-align: center;
+    display: block;
+    background-color: #eee;
+    padding: 5rem 7%;
+}
+
+.awal h1{
+    font-size: 5rem;
+    color: #333;
+    font-weight: bolder;
+    padding: 3rem 0;
+}
+
+.awal p{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+    padding: 0 20% 5rem 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.awal .line{
+    width: 10%;
+    height: .5rem;
+    background-color: var(--navy);
+    margin: 0 auto;
+}
+
+.image{
+    margin: 0rem 3rem;
+}
+
+.kontener{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    margin: 5rem 5rem 2rem 5rem;
+}
+
+.kontener:hover img{
+    filter: grayscale() blur(.2rem);
+}
+
+.kontener img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.kontener img:hover{
+    scale: 1.2;
+    rotate: 5deg;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .5);
+    filter: none;
+    z-index: 1;
+}
+
+.kontener .b:hover{
+    scale: 1.2;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .5);
+    rotate: 0deg;
+}
+
+.kontener .c:hover{
+    scale: 1.2;
+    rotate: -5deg;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .5);
+}
+
+.conten{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    margin: 0 5rem 5rem 5rem;
+}
+
+.conten:hover img{
+    filter: grayscale() blur(.2rem);
+}
+
+.conten img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.conten img:hover{
+    filter: none;
+    z-index: 1;
+}
+
+.conten .a:hover{
+    scale: 1.2;
+    rotate: 5deg;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .5);
+}
+
+.conten .c:hover{
+    scale: 1.2;
+    rotate: -5deg;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .5);
+}
+
+.vid{
+    padding: 0 5rem;
+    display: grid;
+}
+
+.vid video{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.soon{
+    padding: 5rem;
+    text-align: center;
+}
+
+.soon h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* footer */
+.bawah{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+}
+
+.bawah .name{
+    color: #fff;
+}
+
+.bawah .name span{
+    color: var(--navy);
+}
+
+.bawah .name:hover {
+    color: var(--navy);
+}
+
+.bawah ul a{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+}
+
+.bawah ul a:hover{
+    color: var(--navy);
+}
+
+.bawah .ling a{
+    font-size: 3rem;
+    color: #fff;
+    padding: 1rem;
+}
+
+.bawah .ling a:hover{
+    color: var(--navy);
+}
+
+footer{
+    background-color: #041C32;
+}
+
+footer hr{
+    height: .1rem;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.garis{
+    size: 1.5rem;
+    background-color: rgba(255, 255, 255,.5);
+    height: .1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer .copyrek{
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    cursor: default;
+}
+
+@media screen and (max-width : 425px) {
+    /* navigator */
+    .navigator{
+        display: block;
+        text-align: center;
+        padding: 2.5rem 7%;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav a{
+        padding: 0;
+        width: fit-content;
+    }
+
+    .awal p{
+        text-align: justify;
+        padding: 0 10% 5rem 10%;
+    }
+
+    .pic{
+        padding: 2rem;
+    }
+
+    .kontener{
+        grid-template-columns: auto;
+        margin: 4rem;
+    }
+
+    .image{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .kontener img:hover{
+        rotate: 0deg;
+    }
+
+    .kontener .c:hover{
+        rotate: 0deg;
+    }
+
+    .conten{
+        grid-template-columns: auto;
+        margin: 4rem;
+    }
+
+    .conten .a:hover{
+        rotate: 0deg;
+    }
+
+    .conten .c:hover{
+        rotate: 0deg;
+    }
+
+    .vid{
+        margin: 0 auto;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    /* lord */
+    .login{
+        display: block;
+        padding: 5rem 10%;
+    }
+
+    .login .tx3{
+        text-align: center;
+    }
+
+    .login .linkk{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .login .linkk a{
+        margin: 0;
+    }
+
+    .bawah{
+        display: block;
+        text-align: center;
+    }
+
+    .bawah ul{
+        padding: 1rem 0;
+    }
+
+}
